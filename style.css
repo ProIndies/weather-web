@@ -8,7 +8,12 @@ html {
   font-family: "Montserrat";
   font-weight: 500;
 }
+img {
+ height: 40px;
+  width: 100%;
+}
 .pre-text {
+  padding-top: 5%;
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
@@ -27,7 +32,7 @@ section {
 .container {
   width: 90%;
   max-width: auto;
-  background-color: #00919f;
+  background: linear-gradient(to right, #004e92, #000428);
   margin: 0 auto;
   height: 80vh;
   position: relative;
@@ -37,6 +42,9 @@ section {
   overflow: hidden;
   z-index: 1;
 }
+
+
+
 .container::after {
   position: absolute;
   content: "";
@@ -45,8 +53,6 @@ section {
   transform: translate(-50%, -50%);
   height: 120%;
   width: 120%;
-  background: linear-gradient(rgba(66, 132, 255, 0.479), rgba(247, 87, 12, 0.219)),
-    url(background.webp);
   background-position: center;
   background-size: cover;
   filter: blur(3px);
@@ -89,9 +95,7 @@ form button[type="submit"] {
   color: white;
   font-size: 30px;
 }
-form button ion-icon {
-  margin-bottom: -6px;
-}
+
 form input::placeholder {
   font-family: "Montserrat";
   letter-spacing: 1.2px;
@@ -99,26 +103,35 @@ form input::placeholder {
   color: rgb(216, 216, 216);
 }
 .container .details {
+  border-radius: 71px;
+background: linear-gradient(145deg, #1c2c72, #213488);
+box-shadow:  41px 41px 82px #121c4a,
+             -41px -41px 82px #2c46b4;
   width: 90%;
+  max-width: 600px;
   min-height: 40%;
   margin: 0 auto;
   background-color: #dfbebe94;
   text-align: center;
   padding: 30px 10px;
-  border-radius: 8px;
 }
 .city{
   font-size: 1.2em;
   font-weight: 600;
-  color: #dce3e4;
+  color: #cecece;
   margin-bottom: 5%;
 }
 .temp {
   font-size: 1em;
   padding-bottom: 0.5em;
-  color: #190086;
+  color: #a0abad;
   font-weight: 800; 
 }
+.note {
+  font-size: 0.7em;
+  color: #ff0000;
+  font-weight: 400;
+} 
 .minmaxtemp {
   justify-content: center;
   display: flex;
@@ -158,3 +171,58 @@ form input::placeholder {
 .query {
   margin-top: 20px;
 }
+/*Button Animation */
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+ }
+ 
+ button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+ }
+ 
+ button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+ }
+ 
+ button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+ }
+ 
+ button:hover span {
+  transform: translateX(5em);
+ }
+ 
+ button:active {
+  transform: scale(0.95);
+ }
+ 
+ @keyframes fly-1 {
+  from {
+   transform: translateY(0.1em);
+  }
+ 
+  to {
+   transform: translateY(-0.1em);
+  }
+ }
+ 
+ 
