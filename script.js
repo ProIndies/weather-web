@@ -37,13 +37,13 @@ function generateHTML(data) {
   <h2>Feels Like: ${data.main.feels_like}</h2> 
   <h2>Max. Temp: ${data.main.temp}</h2>
 </div>
-<div>Note Temperature is in Fahrenheit</div>
+<div class="note"> *Note Temperature is in Fahrenheit</div>
 <div class="minmaxtemp1">
   <h2>Sky : ${data.weather[0].description}</h2> 
   <h2>Humidity : ${data.main.humidity}%</h2>
 </div>
 <div class="pi">
-<a href="https://proindies.com"><img width="50%" src="https://proindies.com/img/proindies-logo.png"</a>
+<a href="https://proindies.com"><img hight="40px" width="50%" src="https://proindies.com/img/proindies-logo.png"</a>
 </div>
   `;
   details.innerHTML = html;
