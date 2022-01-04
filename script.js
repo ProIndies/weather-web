@@ -2,6 +2,9 @@ const apikey = "2fa9121772482abaf348a42a8f853cf6";
 const formEl = document.querySelector("form");
 const details = document.querySelector(".details");
 
+
+
+
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
   details.innerHTML = "<h1>Loading...</h1>";
@@ -31,13 +34,13 @@ function generateHTML(data) {
 
 
   <div class="temp">
-  <h1>Avg Temperature: ${data.main.temp}°F</h1>
+  <h1>Avg Temp: ${data.main.temp}Kelvin</h1>
   </div>
 <div class="minmaxtemp">
   <h2>Feels Like: ${data.main.feels_like}</h2> 
   <h2>Max. Temp: ${data.main.temp}</h2>
 </div>
-<div class="note"> *Note Temperature is in Fahrenheit</div>
+<div class="note"> *Note Temperature is in Kelvin</div>
 <div class="minmaxtemp1">
   <h2>Sky : ${data.weather[0].description}</h2> 
   <h2>Humidity : ${data.main.humidity}%</h2>
