@@ -34,7 +34,7 @@ function generateHTML(data) {
 
 
   <div class="temp">
-  <h1>Avg Temp: ${data.main.temp}Kelvin</h1>
+  <h1>Avg Temp: ${data.main.temp} Kelvin</h1>
   </div>
 <div class="minmaxtemp">
   <h2>Feels Like: ${data.main.feels_like}</h2> 
